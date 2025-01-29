@@ -12,7 +12,7 @@ int main(void) {
   if (scanf("%d", &n) != 1 || n <= 0) {
     printf("Invalid input or number of elements.\n");
 
-    // Exit with a error status code
+    // Exit with an error status code
     return 1;
   }
 
@@ -21,7 +21,7 @@ int main(void) {
   if (numbers == NULL) {
     printf("Memory allocation failed.\n");
 
-    // Exit with a error status code
+    // Exit with an error status code
     return 1;
   }
 
@@ -34,7 +34,7 @@ int main(void) {
       // Clean up before exiting
       free(numbers);
 
-      // Exit with a error status code
+      // Exit with an error status code
       return 1;
     }
   }
@@ -54,5 +54,5 @@ int main(void) {
   free(numbers);
 
   // Successful completion
-  return 0; 
+  return 0;
 }
