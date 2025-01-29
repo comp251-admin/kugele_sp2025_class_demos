@@ -1,3 +1,6 @@
+/* A C program that reads a variable size array of numbers from the
+ * command line and displays the maximum of these.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 

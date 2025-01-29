@@ -1,3 +1,5 @@
+# A Python program that reads a variable length list of numbers from
+# the command line and displays the maximum of these.
 import sys
 
 # Prompt the user for the number of elements
@@ -5,10 +7,14 @@ try:
     n = int(input('How many numbers do you want to enter? '))
 except ValueError:
     print('Invalid input. Please enter a positive integer.')
+
+    # Exit with a success status code
     sys.exit(1)
 
 if n <= 0:
     print('Number of elements must be a positive integer.')
+
+    # Exit with a success status code
     sys.exit(1)
 
 # Read the numbers into a list using a loop
