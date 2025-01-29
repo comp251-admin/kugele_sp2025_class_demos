@@ -40,7 +40,7 @@ int main(void) {
   }
 
   // Display the result
-  printf("The maximum number is: %f\n", max);
+  printf("The maximum number is: %.2f\n", max);
 
   // Free the allocated memory
   free(numbers);

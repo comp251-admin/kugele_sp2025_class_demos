@@ -28,7 +28,7 @@ for i in range(n):
     numbers.append(val)
 
 # Compute and display the maximum
-print(f'The maximum number is: {max(numbers)}')
+print(f'The maximum number is: {max(numbers):.2f}')
 
 # Exit with a success status code
 sys.exit(0)
