@@ -11,14 +11,18 @@ int main(void) {
   printf("How many numbers do you want to enter? ");
   if (scanf("%d", &n) != 1 || n <= 0) {
     printf("Invalid input or number of elements.\n");
-    return 1; // Exit with an error code
+
+    // Exit with a error status code
+    return 1;
   }
 
   // Dynamically allocate memory for 'n' doubles
   double *numbers = (double *)malloc(n * sizeof(double));
   if (numbers == NULL) {
     printf("Memory allocation failed.\n");
-    return 1; // Exit with an error code
+
+    // Exit with a error status code
+    return 1;
   }
 
   // Read the numbers from the user
@@ -26,7 +30,11 @@ int main(void) {
     printf("Enter number %d: ", i + 1);
     if (scanf("%lf", &numbers[i]) != 1) {
       printf("Invalid input.\n");
-      free(numbers); // Clean up before exiting
+
+      // Clean up before exiting
+      free(numbers);
+
+      // Exit with a error status code
       return 1;
     }
   }
@@ -45,5 +53,6 @@ int main(void) {
   // Free the allocated memory
   free(numbers);
 
-  return 0; // Successful completion
+  // Successful completion
+  return 0; 
 }

@@ -8,13 +8,13 @@ try:
 except ValueError:
     print('Invalid input. Please enter a positive integer.')
 
-    # Exit with a success status code
+    # Exit with a error status code
     sys.exit(1)
 
 if n <= 0:
     print('Number of elements must be a positive integer.')
 
-    # Exit with a success status code
+    # Exit with a error status code
     sys.exit(1)
 
 # Read the numbers into a list using a loop
@@ -24,7 +24,10 @@ for i in range(n):
         val = float(input(f'Enter number {i+1}: '))
     except ValueError:
         print('Invalid input.')
+
+        # Exit with a error status code
         sys.exit(1)
+
     numbers.append(val)
 
 # Compute and display the maximum
