@@ -8,13 +8,13 @@ try:
 except ValueError:
     print('Invalid input. Please enter a positive integer.')
 
-    # Exit with a error status code
+    # Exit with an error status code
     sys.exit(1)
 
 if n <= 0:
     print('Number of elements must be a positive integer.')
 
-    # Exit with a error status code
+    # Exit with an error status code
     sys.exit(1)
 
 # Read the numbers into a list using a loop
@@ -25,7 +25,7 @@ for i in range(n):
     except ValueError:
         print('Invalid input.')
 
-        # Exit with a error status code
+        # Exit with an error status code
         sys.exit(1)
 
     numbers.append(val)
