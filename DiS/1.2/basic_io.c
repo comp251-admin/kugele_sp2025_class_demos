@@ -11,7 +11,7 @@ void display_sum(void) {
   printf("Enter another: ");
   scanf("%d", &num2);
 
-  printf("%d + %d = %d\n", num1, num2, (num1+num2));
+  printf("%d + %d = %d\n", num1, num2, (num1 + num2));
 }
 
 void display_value(void) {
@@ -24,8 +24,8 @@ void display_value(void) {
 
 int main(void) {
 
-  // display_sum();
-  display_value();
+  display_sum();
+  // display_value();
 
   return 0;
 }
