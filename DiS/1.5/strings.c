@@ -16,7 +16,8 @@ int main(void) {
   printf("string value: %s\n", c_str);
   printf("string length: %lu\n", strlen(c_str));
 
-  // WATCH OUT: in practice you should never assign a string literal to a char[]!!!
+  // WATCH OUT: in practice you should never assign a string literal to a
+  // char[]!!!
   char another_str[10] = "not hello";
 
   printf("another_str (old value): %s\n", another_str);
@@ -29,10 +30,9 @@ int main(void) {
   printf("another_str (new length): %lu\n", strlen(another_str));
 
   // question: why does this work?
-  if (! strcmp(c_str, another_str)) { 
+  if (!strcmp(c_str, another_str)) {
     puts("strings are the same!!!");
-  }
-  else {
+  } else {
     puts("strings are different!!!");
   }
 
