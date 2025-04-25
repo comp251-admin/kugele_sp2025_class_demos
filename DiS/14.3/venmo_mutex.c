@@ -6,7 +6,7 @@
 // shared Venmo balance
 int venmo_balance = 1000;
 
-pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mutex;
 
 void *deposit(void *arg) {
   for (int i = 0; i < NUM_ITERATIONS; ++i) {
@@ -36,6 +36,8 @@ void *withdraw(void *arg) {
 
 int main() {
   pthread_t thread_a, thread_b;
+
+  pthread_mutex_init(&mutex, NULL);
 
   pthread_create(&thread_a, NULL, deposit, NULL);
   pthread_create(&thread_b, NULL, withdraw, NULL);
