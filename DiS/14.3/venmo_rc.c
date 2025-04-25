@@ -4,7 +4,7 @@
 #define NUM_ITERATIONS 100000 // number of operations for each thread
 
 // shared Venmo balance
-int venmo_balance = 1000;
+int venmo_balance = 1000; // initial balance $1000
 
 void *deposit(void *arg) {
   for (int i = 0; i < NUM_ITERATIONS; ++i) {
@@ -21,13 +21,13 @@ void *withdraw(void *arg) {
 }
 
 int main() {
-  pthread_t thread_a, thread_b;
+  pthread_t depositer, withdrawer;
 
-  pthread_create(&thread_a, NULL, deposit, NULL);
-  pthread_create(&thread_b, NULL, withdraw, NULL);
+  pthread_create(&depositer, NULL, deposit, NULL);
+  pthread_create(&withdrawer, NULL, withdraw, NULL);
 
-  pthread_join(thread_a, NULL);
-  pthread_join(thread_b, NULL);
+  pthread_join(depositer, NULL);
+  pthread_join(withdrawer, NULL);
 
   printf("Final Venmo balance: $%d\n", venmo_balance);
 
